@@ -45,3 +45,4 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set number
+set laststatus=2
