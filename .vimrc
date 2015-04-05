@@ -46,3 +46,4 @@ filetype plugin indent on    " required
 
 set number
 set laststatus=2
+colorscheme desert
