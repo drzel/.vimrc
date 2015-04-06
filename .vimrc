@@ -19,12 +19,8 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'jiangmiao/auto-pairs'
-<<<<<<< HEAD
 Plugin 'romainl/Apprentice.git'
 Plugin 'nanotech/jellybeans.vim'
-=======
-Plugin 'altercation/vim-colors-solarized'
->>>>>>> f152ba6fe838a2098fa2963898c05de0d2b846b3
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
@@ -54,11 +50,5 @@ filetype plugin indent on    " required
 
 set number
 set laststatus=2
-<<<<<<< HEAD
 set t_Co=256
 colorscheme apprentice
-=======
-syntax enable
-set background=dark
-colorscheme solarized
->>>>>>> f152ba6fe838a2098fa2963898c05de0d2b846b3
