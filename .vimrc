@@ -21,6 +21,7 @@ Plugin 'tpope/vim-rails'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'romainl/Apprentice.git'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'scrooloose/nerdtree'
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
