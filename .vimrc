@@ -55,3 +55,4 @@ set t_Co=256
 colorscheme apprentice
 set shiftwidth=2
 set tabstop=2
+au BufRead,BufNewFile *.md set filetype=markdown
