@@ -19,6 +19,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'altercation/vim-colors-solarized'
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
@@ -48,4 +49,6 @@ filetype plugin indent on    " required
 
 set number
 set laststatus=2
-colorscheme desert
+syntax enable
+set background=dark
+colorscheme solarized
