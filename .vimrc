@@ -20,6 +20,7 @@ Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'romainl/Apprentice.git'
+Plugin 'nanotech/jellybeans.vim'
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
@@ -49,4 +50,5 @@ filetype plugin indent on    " required
 
 set number
 set laststatus=2
+set t_Co=256
 colorscheme apprentice
