@@ -50,7 +50,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " Use syntax highlighting
-set syntax enable
+set syntax=on
 
 " Show line numbers
 set number
