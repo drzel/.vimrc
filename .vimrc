@@ -49,10 +49,21 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Show line numbers
 set number
+
+" Status bar always displayed
 set laststatus=2
+
+" Show 256 colors
 set t_Co=256
+
+" Set colorscheme
 colorscheme apprentice
+
+" Set indent size
 set shiftwidth=2
 set tabstop=2
+
+" Use markdown syntax highlighting for .md files
 au BufRead,BufNewFile *.md set filetype=markdown
