@@ -70,3 +70,6 @@ set tabstop=2
 
 " Use markdown syntax highlighting for .md files
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" Keymappings
+nmmap <F7> :NERDTreeToggle<CR>
