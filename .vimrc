@@ -72,4 +72,4 @@ set tabstop=2
 au BufRead,BufNewFile *.md set filetype=markdown
 
 " Keymappings
-nmmap <F7> :NERDTreeToggle<CR>
+nmap <F7> :NERDTreeToggle<CR>
