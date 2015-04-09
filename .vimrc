@@ -73,3 +73,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 
 " Keymappings
 nmap <F7> :NERDTreeToggle<CR>
+
+" Show invisibles
+set list
+set listchars=tab:▸\ ,eol:
