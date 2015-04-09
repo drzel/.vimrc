@@ -77,3 +77,6 @@ nmap <F7> :NERDTreeToggle<CR>
 " Show invisibles
 set list
 set listchars=tab:▸\ ,eol:
+
+" Convert markdown to HTML
+nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
