@@ -80,3 +80,6 @@ set listchars=tab:▸\ ,eol:
 
 " Convert markdown to HTML
 nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
+
+" Open new vsplits on the right
+:set splitright
