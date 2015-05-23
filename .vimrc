@@ -67,6 +67,7 @@ colorscheme apprentice
 " Set indent size
 set shiftwidth=2
 set tabstop=2
+set expandtab
 
 " Use markdown syntax highlighting for .md files
 au BufRead,BufNewFile *.md set filetype=markdown
