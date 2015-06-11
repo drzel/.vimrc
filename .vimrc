@@ -16,7 +16,6 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'tpope/vim-fugitive'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-rails'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'romainl/Apprentice.git'
@@ -77,10 +76,15 @@ nmap <F7> :NERDTreeToggle<CR>
 
 " Show invisibles
 set list
-set listchars=tab:▸\ ,eol:
+set listchars=tab:▸\ ,eol:↵
 
 " Convert markdown to HTML
 nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
 
 " Open new vsplits on the right
 :set splitright
+
+" Add powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
