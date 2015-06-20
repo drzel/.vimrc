@@ -17,10 +17,19 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'junegunn/goyo.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-rails'
-Plugin 'jiangmiao/auto-pairs'
+Plugin 'tpope/vim-surround'
 Plugin 'romainl/Apprentice.git'
+Plugin 'romainl/Disciple'
 Plugin 'nanotech/jellybeans.vim'
+Plugin 'xolox/vim-colorscheme-switcher'
+Plugin 'xolox/vim-misc'
 Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-sleuth'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'tpope/vim-endwise'
+Plugin 'Raimondi/delimitMate'
+
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
 "" Git plugin not hosted on GitHub
@@ -83,6 +92,13 @@ nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
 
 " Open new vsplits on the right
 :set splitright
+
+" Turn off splash screen
+set shortmess=I
+
+" Add line at 80 colums
+execute "set colorcolumn=" . join(range(81,335), ',')
+hi colorcolumn ctermbg=black
 
 " Add powerline
 python from powerline.vim import setup as powerline_setup
