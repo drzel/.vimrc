@@ -19,13 +19,10 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'romainl/Apprentice.git'
-Plugin 'romainl/Disciple'
-Plugin 'nanotech/jellybeans.vim'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-sensible'
-Plugin 'tpope/vim-sleuth'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
@@ -72,6 +69,9 @@ set t_Co=256
 " Set colorscheme
 colorscheme apprentice
 
+" Add cursor line
+set cursorline
+
 " Set indent size
 set shiftwidth=2
 set tabstop=2
@@ -85,7 +85,8 @@ nmap <F7> :NERDTreeToggle<CR>
 
 " Show invisibles
 set list
-set listchars=tab:▸\ ,eol:↵
+set listchars=tab:▸\  
+", eol:↵
 
 " Convert markdown to HTML
 nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
@@ -98,7 +99,21 @@ set shortmess=I
 
 " Add line at 80 colums
 execute "set colorcolumn=" . join(range(81,335), ',')
-hi colorcolumn ctermbg=black
+hi colorcolumn ctermbg=black guibg=#1C1C1C
+
+" GUI settings
+if has("gui_running")
+  set lines=32 columns=118
+  set guioptions-=r  "remove right-hand scroll bar
+  set guioptions-=L  "remove left-hand scroll bar in split windows
+  set guioptions-=T  "remove toolbar
+  hi NonText guibg=#1C1C1C
+  if has("gui_gnome")
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
+  elseif has("gui_win32")
+    set guifont=Consolas:h13:cANSI
+  endif
+endif
 
 " Add powerline
 python from powerline.vim import setup as powerline_setup
