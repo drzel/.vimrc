@@ -97,19 +97,22 @@ nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
 " Turn off splash screen
 set shortmess=I
 
-" Add line at 80 colums
+" Change background color after 80 columns
 execute "set colorcolumn=" . join(range(81,335), ',')
 hi colorcolumn ctermbg=black guibg=#1C1C1C
 
+" Wrap at whitespace
+set wrap linebreak nolist
+
 " GUI settings
 if has("gui_running")
-  set lines=32 columns=118
+  set lines=37 columns=149
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar in split windows
   set guioptions-=T  "remove toolbar
   hi NonText guibg=#1C1C1C
   if has("gui_gnome")
-    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 13
   elseif has("gui_win32")
     set guifont=Consolas:h13:cANSI
   endif
