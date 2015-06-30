@@ -23,9 +23,9 @@ Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-sensible'
-Plugin 'Valloric/YouCompleteMe'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
+Plugin 'Valloric/YouCompleteMe'
 
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -111,12 +111,17 @@ if has("gui_running")
   set guioptions-=L  "remove left-hand scroll bar in split windows
   set guioptions-=T  "remove toolbar
   hi NonText guibg=#1C1C1C
-  if has("gui_gnome")
+  if has("gui_gtk")
     set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 13
   elseif has("gui_win32")
     set guifont=Consolas:h13:cANSI
   endif
 endif
+
+" Save tempfiles in .vim directory
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
+set undodir=~/.vim/undo//
 
 " Add powerline
 python from powerline.vim import setup as powerline_setup
