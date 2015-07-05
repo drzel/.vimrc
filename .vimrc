@@ -63,6 +63,9 @@ set number
 " Status bar always displayed
 set laststatus=2
 
+" Hide default mode text below status line
+set noshowmode
+
 " Show 256 colors
 set t_Co=256
 
@@ -104,6 +107,9 @@ hi colorcolumn ctermbg=black guibg=#1C1C1C
 " Wrap at whitespace
 set wrap linebreak nolist
 
+" Keep edit line centered
+set so=999
+
 " GUI settings
 if has("gui_running")
   set lines=37 columns=149
@@ -127,3 +133,30 @@ set undodir=~/.vim/undo//
 python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
+
+" Add less mode
+function! LessMode()
+  if g:lessmode == 0
+    let g:lessmode = 1
+    let onoff = 'on'
+    " Scroll half a page down
+    noremap <script> d <C-D>
+    " Scroll one line down
+    noremap <script> j <C-E>
+    " Scroll half a page up
+    noremap <script> u <C-U>
+    " Scroll one line up
+    noremap <script> k <C-Y>
+  else
+    let g:lessmode = 0
+    let onoff = 'off'
+    unmap d
+    unmap j
+    unmap u
+    unmap k
+  endif
+  echohl Label | echo "Less mode" onoff | echohl None
+endfunction
+let g:lessmode = 0
+nnoremap <F5> :call LessMode()<CR>
+inoremap <F5> <Esc>:call LessMode()<CR>
