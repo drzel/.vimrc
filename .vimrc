@@ -160,3 +160,9 @@ endfunction
 let g:lessmode = 0
 nnoremap <F5> :call LessMode()<CR>
 inoremap <F5> <Esc>:call LessMode()<CR>
+
+" Ctrl-p only search git files
+
+" Single VCS, listing command lists untracked files (slower):
+let g:ctrlp_user_command =
+  \ ['.git', 'cd %s && git ls-files . -co --exclude-standard']
