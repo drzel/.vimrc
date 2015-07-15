@@ -110,6 +110,15 @@ set wrap linebreak nolist
 " Keep edit line centered
 set so=999
 
+" Open NERDTree if no file specified
+function! StartUp()
+    if 0 == argc()
+        NERDTree
+    end
+endfunction
+
+autocmd VimEnter * call StartUp()
+
 " GUI settings
 if has("gui_running")
   set lines=37 columns=149
