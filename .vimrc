@@ -108,7 +108,7 @@ hi colorcolumn ctermbg=black guibg=#1C1C1C
 set wrap linebreak nolist
 
 " Keep edit line centered
-set so=999
+set so=3
 
 " Open NERDTree if no file specified
 function! StartUp()
