@@ -26,6 +26,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'nathanaelkane/vim-indent-guides'
 
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -117,6 +118,27 @@ function! StartUp()
     end
 endfunction
 
+" Close vim if NERDTree is only buffer
+function! NERDTreeQuit()
+  redir => buffersoutput
+  silent buffers
+  redir END
+"                     1BufNo  2Mods.     3File           4LineNo
+  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+  let windowfound = 0
+  for bline in split(buffersoutput, "\n")
+    let m = matchlist(bline, pattern)
+    if (len(m) > 0)
+      if (m[2] =~ '..a..')
+        let windowfound = 1
+      endif
+    endif
+  endfor
+  if (!windowfound)
+    quitall
+  endif
+endfunction
+autocmd WinEnter * call NERDTreeQuit()
 autocmd VimEnter * call StartUp()
 
 " GUI settings
@@ -132,6 +154,12 @@ if has("gui_running")
     set guifont=Consolas:h13:cANSI
   endif
 endif
+
+" vim-indent-guides
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#292929 ctermbg=3
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2E2E2E ctermbg=4
 
 " Save tempfiles in .vim directory
 set backupdir=~/.vim/backup//
