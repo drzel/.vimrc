@@ -85,8 +85,8 @@ set expandtab
 " Use markdown syntax highlighting for .md files
 au BufRead,BufNewFile *.md set filetype=markdown
 
-" Use c syntax highlighting for .qc files
-autocmd BufRead,BufNewFile *.qc set filetype=c
+" Use qc syntax highlighting
+autocmd BufRead,BufNewFile *.qc set filetype=quakec
 
 " Keymappings
 nmap <F7> :NERDTreeToggle<CR>
