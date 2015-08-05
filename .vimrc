@@ -21,6 +21,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'romainl/Apprentice.git'
 Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-easytags'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-endwise'
@@ -83,6 +84,9 @@ set expandtab
 
 " Use markdown syntax highlighting for .md files
 au BufRead,BufNewFile *.md set filetype=markdown
+
+" Use c syntax highlighting for .qc files
+autocmd BufRead,BufNewFile *.qc set filetype=c
 
 " Keymappings
 nmap <F7> :NERDTreeToggle<CR>
