@@ -28,6 +28,7 @@ Plugin 'tpope/vim-endwise'
 Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'airblade/vim-gitgutter'
 
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -55,6 +56,9 @@ filetype plugin indent on    " required
 "
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
+
+" Use bash shell (needed for GitGutter)
+set shell=/bin/bash
 
 " Use syntax highlighting
 set syntax=on
