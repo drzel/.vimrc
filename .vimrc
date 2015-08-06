@@ -19,16 +19,16 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-surround'
 Plugin 'romainl/Apprentice.git'
-Plugin 'xolox/vim-colorscheme-switcher'
 Plugin 'xolox/vim-misc'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-endwise'
-Plugin 'Raimondi/delimitMate'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'Raimondi/delimitMate'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'
+Plugin 'majutsushi/tagbar'
 
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
@@ -94,6 +94,7 @@ autocmd BufRead,BufNewFile *.qc set filetype=quakec
 
 " Keymappings
 nmap <F7> :NERDTreeToggle<CR>
+nmap <F8> :TagbarToggle<CR>
 
 " Show invisibles
 set list
@@ -104,7 +105,7 @@ set listchars=tab:▸\
 nmap <leader>md :%!/usr/local/bin/Markdown.pl --html4tags <cr>
 
 " Open new vsplits on the right
-:set splitright
+set splitright
 
 " Turn off splash screen
 set shortmess=I
