@@ -116,9 +116,6 @@ hi colorcolumn ctermbg=black guibg=#1C1C1C
 " Wrap at whitespace
 set wrap linebreak nolist
 
-" Keep edit line centered
-set so=3
-
 " Open NERDTree if no file specified
 function! StartUp()
     if 0 == argc()
@@ -179,6 +176,9 @@ python from powerline.vim import setup as powerline_setup
 python powerline_setup()
 python del powerline_setup
 
+" Keep edit line centered
+set so=3
+
 " Add less mode
 function! LessMode()
   if g:lessmode == 0
@@ -186,27 +186,21 @@ function! LessMode()
     let onoff = 'on'
     " Scroll half a page down
     noremap <script> d <C-D>
-    " Scroll one line down
-    noremap <script> j <C-E>
     " Scroll half a page up
     noremap <script> u <C-U>
-    " Scroll one line up
-    noremap <script> k <C-Y>
+    set scrolloff=999
   else
     let g:lessmode = 0
     let onoff = 'off'
     unmap d
-    unmap j
     unmap u
-    unmap k
+    set so=3
   endif
   echohl Label | echo "Less mode" onoff | echohl None
 endfunction
 let g:lessmode = 0
 nnoremap <F5> :call LessMode()<CR>
 inoremap <F5> <Esc>:call LessMode()<CR>
-
-" Ctrl-p only search git files
 
 " Single VCS, listing command lists untracked files (slower):
 let g:ctrlp_user_command =
