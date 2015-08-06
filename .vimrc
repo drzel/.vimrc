@@ -29,6 +29,7 @@ Plugin 'Raimondi/delimitMate'
 Plugin 'nathanaelkane/vim-indent-guides'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-fugitive'
 
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
