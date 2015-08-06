@@ -149,6 +149,7 @@ autocmd VimEnter * call StartUp()
 " GUI settings
 if has("gui_running")
   set lines=37 columns=149
+  set guioptions-=m  "remove menu bar
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar in split windows
   set guioptions-=T  "remove toolbar
