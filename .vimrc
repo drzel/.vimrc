@@ -22,6 +22,7 @@ Plugin 'romainl/Apprentice.git'
 Plugin 'xolox/vim-misc'
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'scrooloose/nerdtree'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-endwise'
 Plugin 'Valloric/YouCompleteMe'
@@ -94,7 +95,7 @@ au BufRead,BufNewFile *.md set filetype=markdown
 autocmd BufRead,BufNewFile *.qc set filetype=quakec
 
 " Keymappings
-nmap <F7> :NERDTreeToggle<CR>
+nmap <F7> :NERDTreeTabsToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 
 " Show invisibles
@@ -119,35 +120,35 @@ hi NonText ctermbg=234 guibg=#1C1C1C
 " Wrap at whitespace
 set wrap linebreak nolist
 
-" Open NERDTree if no file specified
-function! StartUp()
-    if 0 == argc()
-        NERDTree
-    end
-endfunction
-
-" Close vim if NERDTree is only buffer
-function! NERDTreeQuit()
-  redir => buffersoutput
-  silent buffers
-  redir END
-"                     1BufNo  2Mods.     3File           4LineNo
-  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
-  let windowfound = 0
-  for bline in split(buffersoutput, "\n")
-    let m = matchlist(bline, pattern)
-    if (len(m) > 0)
-      if (m[2] =~ '..a..')
-        let windowfound = 1
-      endif
-    endif
-  endfor
-  if (!windowfound)
-    quitall
-  endif
-endfunction
-autocmd WinEnter * call NERDTreeQuit()
-autocmd VimEnter * call StartUp()
+"" Open NERDTree if no file specified
+"function! StartUp()
+"    if 0 == argc()
+"        NERDTree
+"    end
+"endfunction
+"
+"" Close vim if NERDTree is only buffer
+"function! NERDTreeQuit()
+"  redir => buffersoutput
+"  silent buffers
+"  redir END
+""                     1BufNo  2Mods.     3File           4LineNo
+"  let pattern = '^\s*\(\d\+\)\(.....\) "\(.*\)"\s\+line \(\d\+\)$'
+"  let windowfound = 0
+"  for bline in split(buffersoutput, "\n")
+"    let m = matchlist(bline, pattern)
+"    if (len(m) > 0)
+"      if (m[2] =~ '..a..')
+"        let windowfound = 1
+"      endif
+"    endif
+"  endfor
+"  if (!windowfound)
+"    quitall
+"  endif
+"endfunction
+"autocmd WinEnter * call NERDTreeQuit()
+"autocmd VimEnter * call StartUp()
 
 " GUI settings
 if has("gui_running")
