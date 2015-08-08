@@ -97,6 +97,7 @@ autocmd BufRead,BufNewFile *.qc set filetype=quakec
 " Keymappings
 nmap <F7> :NERDTreeTabsToggle<CR>
 nmap <F8> :TagbarToggle<CR>
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
 
 " Show invisibles
 set list
