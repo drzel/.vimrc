@@ -111,9 +111,10 @@ set splitright
 " Turn off splash screen
 set shortmess=I
 
-" Change background color after 80 columns
+" Change background color after 80 columns and in non text area
 execute "set colorcolumn=" . join(range(81,335), ',')
-hi colorcolumn ctermbg=black guibg=#1C1C1C
+hi colorcolumn ctermbg=234 guibg=#1C1C1C
+hi NonText ctermbg=234 guibg=#1C1C1C
 
 " Wrap at whitespace
 set wrap linebreak nolist
@@ -155,9 +156,8 @@ if has("gui_running")
   set guioptions-=r  "remove right-hand scroll bar
   set guioptions-=L  "remove left-hand scroll bar in split windows
   set guioptions-=T  "remove toolbar
-  hi NonText guibg=#1C1C1C
   if has("gui_gtk")
-    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 13
+    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 14
   elseif has("gui_win32")
     set guifont=Consolas:h13:cANSI
   endif
@@ -166,8 +166,8 @@ endif
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 let g:indent_guides_auto_colors = 0
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#292929 ctermbg=3
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2E2E2E ctermbg=4
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#292929 ctermbg=235
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#2E2E2E ctermbg=236
 
 " Save tempfiles in .vim directory
 set backupdir=~/.vim/backup//
