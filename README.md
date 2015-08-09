@@ -1,5 +1,7 @@
 #My .vimrc
 
+Install with dotfiler: https://github.com/svetlyak40wt/dotfiler
+
 * Install Vundle
 * Install powerline
 * Open vim and run :PluginInstall
