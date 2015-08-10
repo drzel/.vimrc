@@ -95,7 +95,14 @@ au BufRead,BufNewFile *.md set filetype=markdown
 " Use qc syntax highlighting
 autocmd BufRead,BufNewFile *.qc set filetype=quakec
 
+" Define insert line break
+function! BreakHere()
+    s/\(.\{-}\)\(\s*\)\(\%#\)\(\s*\)\(.*\)/\1\r\3\5
+    call histdel("/", -1)
+endfunction
+
 " Keymappings
+nnoremap S :call BreakHere()<CR>
 nmap <F7> :NERDTreeTabsToggle<CR>
 nmap <F8> :TagbarToggle<CR>
 map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
