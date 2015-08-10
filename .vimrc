@@ -66,6 +66,7 @@ set shell=/bin/bash
 set syntax=on
 
 " Show line numbers
+set relativenumber
 set number
 
 " Status bar always displayed
