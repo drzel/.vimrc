@@ -60,6 +60,11 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
+" Default indenting (Filetype overrides located in ~/.vim/after/ftplugin)
+set expandtab
+set shiftwidth=2
+set softtabstop=2
+
 " Use bash shell (needed for GitGutter)
 set shell=/bin/bash
 
@@ -84,11 +89,6 @@ colorscheme apprentice
 
 " Add cursor line
 set cursorline
-
-" Set indent size
-set shiftwidth=2
-set tabstop=2
-set expandtab
 
 " Use markdown syntax highlighting for .md files
 au BufRead,BufNewFile *.md set filetype=markdown
