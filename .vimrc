@@ -31,6 +31,7 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'majutsushi/tagbar'
 Plugin 'tpope/vim-fugitive'
 Plugin 'unblevable/quick-scope'
+Plugin 'tpope/vim-cucumber'
 
 "" plugin from http://vim-scripts.org/vim/scripts.html
 "Plugin 'L9'
