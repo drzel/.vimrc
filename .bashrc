@@ -130,3 +130,7 @@ export PATH="/usr/local/heroku/bin:$PATH"
 ### Added for dotfiler
 export PATH="$HOME/.dotfiles/bin:$PATH"
 
+### Enable 256 colors
+case "$TERM" in
+  xterm*) TERM=xterm-256color
+esac
