@@ -134,3 +134,7 @@ export PATH="$HOME/.dotfiles/bin:$PATH"
 case "$TERM" in
   xterm*) TERM=xterm-256color
 esac
+
+### Use nvim as default editor
+export VISUAL=nvim
+export EDITOR="$VISUAL"
