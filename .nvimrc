@@ -2,7 +2,7 @@ call plug#begin('~/.nvim/plugged')
 
 " Make sure you use single quotes
 " Plug 'junegunn/seoul256.vim'
-" Plug 'junegunn/vim-easy-align'
+Plug 'junegunn/vim-easy-align'
 Plug 'romainl/apprentice'
 Plug 'nanotech/jellybeans.vim'
 Plug 'kien/ctrlp.vim'
@@ -14,7 +14,6 @@ Plug 'Raimondi/delimitMate'
 Plug 'nathanaelkane/vim-indent-guides'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-fugitive'
-Plug 'unblevable/quick-scope'
 Plug 'tpope/vim-cucumber'
 Plug 'scrooloose/syntastic'
 Plug 'itchyny/lightline.vim'
@@ -23,10 +22,14 @@ Plug 'scrooloose/nerdtree'
 Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-unimpaired'
 Plug 'ap/vim-css-color'
-"Plug 'jistr/vim-nerdtree-tabs'
-"Plug 'Shougo/unite.vim'
-"Plug 'Shougo/vimfiler.vim'
-"Plug 'bling/vim-airline'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'unblevable/quick-scope'
+" Plug 'tomtom/tcomment_vim'
+" Plug 'jistr/vim-nerdtree-tabs'
+" Plug 'Shougo/unite.vim'
+" Plug 'Shougo/vimfiler.vim'
+" Plug 'bling/vim-airline'
 
 " Group dependencies, vim-snippets depends on ultisnips
 " Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
@@ -247,17 +250,19 @@ function! BreakHere()
 endfunction
 
 " Keymappings
-nnoremap S    :call BreakHere()<CR>
-nmap     <F7> :NERDTreeToggle<CR>
-tnoremap <Esc> <C-\><C-n>
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+vmap     <Enter> <Plug>(EasyAlign)
+nmap     ga      <Plug>(EasyAlign)
+nnoremap S       :call BreakHere()<CR>
+nmap     <F7>    :NERDTreeToggle<CR>
+tnoremap <Esc>   <C-\><C-n>
+tnoremap <A-h>   <C-\><C-n><C-w>h
+tnoremap <A-j>   <C-\><C-n><C-w>j
+tnoremap <A-k>   <C-\><C-n><C-w>k
+tnoremap <A-l>   <C-\><C-n><C-w>l
+nnoremap <A-h>   <C-w>h
+nnoremap <A-j>   <C-w>j
+nnoremap <A-k>   <C-w>k
+nnoremap <A-l>   <C-w>l
 
 " Use qc syntax highlighting
 autocmd BufRead,BufNewFile *.qc set filetype=quakec
@@ -291,6 +296,9 @@ set colorcolumn=81
 set backupdir=~/.nvim/backup//
 set directory=~/.nvim/swap//
 set undodir=~/.nvim/undo//
+
+" Treat numbers as decimals (affects <C-a> on numbers with leading zeros)
+set nrformats=
 
 " Change curser in insert mode
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
