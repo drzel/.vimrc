@@ -19,12 +19,12 @@ Plug 'scrooloose/syntastic'
 Plug 'itchyny/lightline.vim'
 Plug 'floobits/floobits-neovim'
 Plug 'scrooloose/nerdtree'
-Plug 'Valloric/YouCompleteMe'
 Plug 'tpope/vim-unimpaired'
 Plug 'ap/vim-css-color'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
 Plug 'unblevable/quick-scope'
+" Plug 'Valloric/YouCompleteMe'
 " Plug 'tomtom/tcomment_vim'
 " Plug 'jistr/vim-nerdtree-tabs'
 " Plug 'Shougo/unite.vim'
@@ -202,31 +202,12 @@ let g:vimshell_force_overwrite_statusline = 0
 set shell=/bin/bash " Use bash shell
 
 " quick-scope
-let g:qs_enable = 0
-let g:qs_enable_char_list = [ 'f', 'F', 't', 'T' ]
-
-function! Quick_scope_selective(movement)
-  let needs_disabling = 0
-  if !g:qs_enable
-    QuickScopeToggle
-    redraw
-    let needs_disabling = 1
-  endif
-  let letter = nr2char(getchar())
-  if needs_disabling
-    QuickScopeToggle
-  endif
-  return a:movement . letter
-endfunction
-
-for i in g:qs_enable_char_list
-  execute 'noremap <expr> <silent>' . i . " Quick_scope_selective('". i . "')"
-endfor
+let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
 
 " vim-indent-guides
 let g:indent_guides_enable_on_vim_startup = 1
 
-" Syntastic recommended defults
+" Syntastic
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -243,16 +224,9 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
 " Functions
 
-" Define insert line break
-function! BreakHere()
-  s/\(.\{-}\)\(\s*\)\(\%#\)\(\s*\)\(.*\)/\1\r\3\5
-  call histdel("/", -1)
-endfunction
-
 " Keymappings
 vmap     <Enter> <Plug>(EasyAlign)
 nmap     ga      <Plug>(EasyAlign)
-nnoremap S       :call BreakHere()<CR>
 nmap     <F7>    :NERDTreeToggle<CR>
 tnoremap <Esc>   <C-\><C-n>
 tnoremap <A-w>   <C-\><C-n><C-w>w
@@ -268,8 +242,9 @@ nnoremap <A-j>   <C-w>j
 nnoremap <A-k>   <C-w>k
 nnoremap <A-l>   <C-w>l
 
-" Use qc syntax highlighting
-autocmd BufRead,BufNewFile *.qc set filetype=quakec
+" Syntax highlighting
+autocmd BufRead,BufNewFile     *.qc set filetype=quakec
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Default indenting
 set expandtab
