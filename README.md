@@ -1,7 +1,7 @@
 # Ruby on Rails & Neovim in Lubuntu Virtual Machine
 
 ## VirtualBox
-Download and install latest for your OS from https://www.virtualbox.org/wiki/Downloads
+Download and install latest files for your OS from https://www.virtualbox.org/wiki/Downloads
 
 ## Lubuntu
 * Download latest .iso file from http://lubuntu.net/
@@ -11,19 +11,19 @@ Download and install latest for your OS from https://www.virtualbox.org/wiki/Dow
 	* Type: Linux
 	* Version: Other Linux
 	* Memory size: At least 2048 MB
-	* Create a virtual hard disk now. Allocate atleast 8 GB.
+	* Create a virtual hard disk now. Allocate atleast 8 GB
 * Click Start
 * Select the Lubuntu .iso file from the dropdown menu
 * Click Start
-* Follow the installation prompts. If the installation hangs when attempting to restart click Machine > Reset to continue with the installation.
+* Follow the installation prompts. If the installation hangs when attempting to restart click Machine > Reset to continue with the installation
 
 ## Update Lubuntu
 * Click update if prompted to install updates, or
-* Go to System Tools > Software Updater.
+* Go to System Tools > Software Updater
 * Install updates
 
 ## Install VirtualBox Guest Additions
-From VirtualBox menu select Devices > Insert Guest Additions CD Images, or if you have downloaded a test build Guest Additions, select Devices > Optical Drives > Choose Disk Image... and select the Guest Additions .iso fie.
+From VirtualBox menu select Devices > Insert Guest Additions CD Images, or if you have downloaded a test build Guest Additions, select Devices > Optical Drives > Choose Disk Image... and select the Guest Additions .iso fie
 
 ## Install repositories
 ```bash
@@ -43,11 +43,11 @@ sudo apt-get install build-essential curl git cmake xsel numix-gtk-theme numix-i
 
 ## Configure theme
 Open Menu > Preferences > Customize Look and Feel
-* Widgit: Numix
+* Widget: Numix
 * Icon Theme: Numix Circle
 * Window Border: Theme > Numix
 
-At this point I recommend closing LXTerminal.
+At this point I recommend closing LXTerminal
 
 ## Installing Ruby / Rails
 ### Configure Konsole for RVM
@@ -55,14 +55,15 @@ At this point I recommend closing LXTerminal.
 * Click Settings > Edit Current Profile...
 * Set General > Command: /bin/bash --login
 * Click OK
-Note: For installation on other terminals check https://rvm.io/integration for correct settings.
+Note: For installation on other terminals check https://rvm.io/integration for correct settings
 
 ### Install RVM
 ```
 \curl -sSL https://get.rvm.io | bash -s stable --rails
 source /home/drzel/.rvm/scripts/rvm
-type rvm | head -1 					//confim install
+type rvm | head -1
 ```
+You should see `rvm is /home/username/.rvm/bin/rvm`. If you see 'RVM is not a function' your terminal probably isn't properly configured.
 
 ### Configure postgresql
 For easiest setup use the same username and passowrd as your Lubuntu user account
@@ -76,7 +77,7 @@ postgres=# \q
 ```
 
 ### Install Node.js
-```
+```bash
 curl -sL https://deb.nodesource.com/setup_0.12 | sudo bash -
 sudo apt-get install -y nodejs
 ```
@@ -88,7 +89,6 @@ git config --global user.name "Your Name"
 ```
 
 ## Configure neovim
-
 ### Make neovim the default editor
 ```bash
 sudo update-alternatives --install /usr/bin/vi vi /usr/bin/nvim 60
