@@ -271,11 +271,6 @@ set splitright
 " Draw a line on the 81st column
 set colorcolumn=81
 
-" Save tempfiles in .nvim directory
-set backupdir=~/.nvim/backup//
-set directory=~/.nvim/swap//
-set undodir=~/.nvim/undo//
-
 " Treat numbers as decimals (affects <C-a> on numbers with leading zeros)
 set nrformats=
 
