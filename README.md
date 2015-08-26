@@ -66,7 +66,7 @@ type rvm | head -1
 You should see `rvm is /home/username/.rvm/bin/rvm`. If you see 'RVM is not a function' your terminal probably isn't properly configured.
 
 ### Configure postgresql
-For easiest setup use the same username and passowrd as your Lubuntu user account
+For easiest setup use the same username and password as your Lubuntu user account
 ```bash
 sudo -u postgres createuser -s username
 sudo -u postgres psql
@@ -134,4 +134,4 @@ rails new temp-rails-project
 cd temp-rails-project
 rails s
 ```
-Then point your browser to `localhost:3000`. If you see the Rails 'Welcome aboard' sit you're good to go. When your'e done you can remove the `temp-rails-project` folder.
+Then point your browser to `localhost:3000`. If you see the Rails 'Welcome aboard' sit you're good to go. When you're done you can remove the `temp-rails-project` folder.
