@@ -53,10 +53,10 @@ Color=173,173,173
 Color=173,173,173
 
 [Foreground]
-Color=178,178,178
+Color=232,232,211
 
 [ForegroundIntense]
-Color=255,255,255
+Color=232,232,211
 
 [General]
 Description=Jellybeans
