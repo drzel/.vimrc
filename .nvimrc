@@ -247,9 +247,9 @@ autocmd BufRead,BufNewFile     *.qc set filetype=quakec
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 
 " Default indenting
-set expandtab
-set shiftwidth=2
-set softtabstop=2
+" set expandtab
+" set shiftwidth=2
+" set softtabstop=2
 
 " Show line numbers
 set number
