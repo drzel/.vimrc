@@ -38,7 +38,18 @@ sudo apt-get update
 
 ## Install programs
 ```bash
-sudo apt-get install build-essential curl git cmake xsel numix-gtk-theme numix-icon-theme numix-icon-theme-circle postgresql postgresql-contrib libpq-dev konsole neovim python-dev python-pip python3-dev python3-pip exuberant-ctags
+sudo apt-get install build-essential curl git cmake xsel numix-gtk-theme numix-icon-theme numix-icon-theme-circle postgresql postgresql-contrib libpq-dev konsole neovim python-dev python-pip python3-dev python3-pip exuberant-ctags powerline
+```
+
+## Configure powerline
+```
+echo -e "
+# For powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/share/powerline/bindings/bash/powerline.sh
+" >> ~/.bashrc
 ```
 
 ## Configure theme
