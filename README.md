@@ -86,7 +86,7 @@ sudo apt-get install -y nodejs
 ```bash
 git config --global user.email "your.email@address.com"
 git config --global user.name "Your Name"
-git config --global core.excludesfile ~/.gitignore_global
+git config --global core.excludesfile ~/.global_gitignore
 ```
 
 ## Configure neovim
