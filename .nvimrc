@@ -274,6 +274,9 @@ set colorcolumn=81
 " Treat numbers as decimals (affects <C-a> on numbers with leading zeros)
 set nrformats=
 
+" Don't close terminal buffers when switched
+autocmd TermOpen * set bufhidden=hide
+
 " Change curser in insert mode
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
 
