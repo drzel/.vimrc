@@ -230,18 +230,17 @@ nmap     ga      <Plug>(EasyAlign)
 nmap     <F7>    :NERDTreeToggle<CR>
 tnoremap <Esc>   <C-\><C-n>
 tnoremap <A-w>   <C-\><C-n><C-w>w
-tnoremap <A-r>   <C-\><C-n><C-w>t<C-w>H<C-w>b<C-w>K
 tnoremap <A-h>   <C-\><C-n><C-w>h
 tnoremap <A-j>   <C-\><C-n><C-w>j
 tnoremap <A-k>   <C-\><C-n><C-w>k
 tnoremap <A-l>   <C-\><C-n><C-w>l
 nnoremap <A-w>   <C-w>w
-nnoremap <A-r>   <C-w>t<C-w>H<C-w>b<C-w>K
 nnoremap <A-h>   <C-w>h
 nnoremap <A-j>   <C-w>j
 nnoremap <A-k>   <C-w>k
 nnoremap <A-l>   <C-w>l
-map      <C-w>gt :tabnew<CR>
+map <leader>t :tabnew<CR>
+map <leader>T :tabnew term://bash<CR>i
 
 " Syntax highlighting
 autocmd BufRead,BufNewFile     *.qc set filetype=quakec
