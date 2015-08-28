@@ -225,22 +225,31 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 " Functions
 
 " Keymappings
-vmap     <Enter> <Plug>(EasyAlign)
-nmap     ga      <Plug>(EasyAlign)
-nmap     <F7>    :NERDTreeToggle<CR>
-tnoremap <Esc>   <C-\><C-n>
-tnoremap <A-w>   <C-\><C-n><C-w>w
-tnoremap <A-h>   <C-\><C-n><C-w>h
-tnoremap <A-j>   <C-\><C-n><C-w>j
-tnoremap <A-k>   <C-\><C-n><C-w>k
-tnoremap <A-l>   <C-\><C-n><C-w>l
-nnoremap <A-w>   <C-w>w
-nnoremap <A-h>   <C-w>h
-nnoremap <A-j>   <C-w>j
-nnoremap <A-k>   <C-w>k
-nnoremap <A-l>   <C-w>l
-map <leader>t :tabnew<CR>
-map <leader>T :tabnew term://bash<CR>i
+vmap     <Enter>      <Plug>(EasyAlign)
+nmap     ga           <Plug>(EasyAlign)
+nmap     <F7>         :NERDTreeToggle<CR>
+tnoremap <Esc>        <C-\><C-n>
+tnoremap <A-w>        <C-\><C-n><C-w>w
+tnoremap <A-h>        <C-\><C-n><C-w>h
+tnoremap <A-j>        <C-\><C-n><C-w>j
+tnoremap <A-k>        <C-\><C-n><C-w>k
+tnoremap <A-l>        <C-\><C-n><C-w>l
+nnoremap <A-w>        <C-w>w
+nnoremap <A-h>        <C-w>h
+nnoremap <A-j>        <C-w>j
+nnoremap <A-k>        <C-w>k
+nnoremap <A-l>        <C-w>l
+tmap     <C-PageUp>   <Esc><C-PageUp>
+tmap     <C-PageDown> <Esc><C-PageDown>
+map      <leader>t    :tabnew<CR>
+map      <leader>T    :tabnew<CR>:term<CR>
+map      <leader>s    :tabnew<CR>:term rails s<CR><Esc>
+map      <leader>c    :tabnew<CR>:term rails c<CR>
+map      <leader>p    :tabnew<CR>:term pry<CR>
+map      <leader>fs   :tabnew<CR>:term foreman s<CR><Esc>
+map      <leader>fc   :tabnew<CR>:term foreman run rails c<CR>
+map      <leader>fp   :tabnew<CR>:term foreman run pry<CR>
+map      <leader>fr   :tabnew<CR>:term<CR>foreman run
 
 " Syntax highlighting
 autocmd BufRead,BufNewFile     *.qc set filetype=quakec
