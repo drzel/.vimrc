@@ -113,8 +113,9 @@ sudo update-alternatives --config editor
 
 ### Install powerline-fonts
 ```bash
-git clone https://github.com/powerline/fonts.git
-~/Downloads/powerline-fonts/./install.sh
+git clone https://github.com/powerline/fonts.git ~/temp
+~/temp/powerline-fonts/./install.sh
+rm -rf ~/temp
 ```
 
 ### Install vim-plug
