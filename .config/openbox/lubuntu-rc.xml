@@ -375,6 +375,14 @@
     <keybind key="F11">
       <action name="ToggleFullscreen"/>
     </keybind>
+    <!-- Keybindings to toggle maximize -->
+    <keybind key="A-F10">
+      <action name="ToggleMaximize"/>
+    </keybind>
+    <!-- Keybindings to iconify -->
+    <keybind key="A-F9">
+      <action name="Iconify"/>
+    </keybind>
     <!-- Launch task manager on Ctrl + Alt + Del-->
     <keybind key="C-A-Delete">
       <action name="Execute">
