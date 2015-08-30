@@ -297,3 +297,21 @@ colorscheme jellybeans
 
 " Custom highlights
 hi colorcolumn guibg=#1C1C1C
+
+" Terminal colors
+let g:terminal_color_0  = '#3b3b3b'
+let g:terminal_color_1  = '#cf6a4c'
+let g:terminal_color_2  = '#99ad6a'
+let g:terminal_color_3  = '#d8ad4c'
+let g:terminal_color_4  = '#597bc5'
+let g:terminal_color_5  = '#a037b0'
+let g:terminal_color_6  = '#71b9f8'
+let g:terminal_color_7  = '#adadad'
+let g:terminal_color_8  = '#3b3b3b'
+let g:terminal_color_9  = '#cf6a4c'
+let g:terminal_color_10  = '#99ad6a'
+let g:terminal_color_11  = '#d8ad4c'
+let g:terminal_color_12  = '#597bc5'
+let g:terminal_color_13  = '#a037b0'
+let g:terminal_color_14  = '#71b9f8'
+let g:terminal_color_15  = '#adadad'
