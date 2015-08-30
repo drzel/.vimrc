@@ -854,6 +854,12 @@
     <!-- show icons on the menu -->
   </menu>
   <applications>
+    <application name="konsole">
+      <size>
+        <width>1002</width>
+        <height>530</height>
+      </size>
+    </application>
     <!--
   # this is an example with comments through out. use these to make your
   # own rules, but without the comments of course.
@@ -868,7 +874,6 @@
                       (if unspecified, then it is 'dialog' for child windows)">
   # you may set only one of name/class/role/title/type, or you may use more
   # than one together to restrict your matches.
-
   # the name, class, role, and title use simple wildcard matching such as those
   # used by a shell. you can use * to match any characters and ? to match
   # any single character.
