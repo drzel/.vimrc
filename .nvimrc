@@ -280,6 +280,11 @@ set splitright
 " Draw a line on the 81st column
 set colorcolumn=81
 
+" Searching
+set ignorecase
+set smartcase
+set incsearch
+
 " Treat numbers as decimals (affects <C-a> on numbers with leading zeros)
 set nrformats=
 
