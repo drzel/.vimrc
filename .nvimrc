@@ -228,7 +228,7 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 vmap     <Enter>      <Plug>(EasyAlign)
 nmap     ga           <Plug>(EasyAlign)
 nmap     <F7>         :NERDTreeToggle<CR>
-tnoremap <Esc>        <C-\><C-n>
+tnoremap <C-[>        <C-\><C-n>
 tnoremap <A-w>        <C-\><C-n><C-w>w
 tnoremap <A-h>        <C-\><C-n><C-w>h
 tnoremap <A-j>        <C-\><C-n><C-w>j

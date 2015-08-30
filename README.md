@@ -38,7 +38,7 @@ sudo apt-get update
 
 ## Install programs
 ```bash
-sudo apt-get install build-essential curl git cmake xsel numix-gtk-theme numix-icon-theme numix-icon-theme-circle postgresql postgresql-contrib libpq-dev konsole neovim python-dev python-pip python3-dev python3-pip exuberant-ctags powerline
+sudo apt-get install build-essential curl git cmake xsel numix-gtk-theme numix-icon-theme numix-icon-theme-circle postgresql postgresql-contrib libpq-dev konsole neovim python-dev python-pip python3-dev python3-pip exuberant-ctags powerline pavucontrol
 ```
 
 ## Configure powerline
@@ -50,6 +50,19 @@ POWERLINE_BASH_CONTINUATION=1
 POWERLINE_BASH_SELECT=1
 . /usr/share/powerline/bindings/bash/powerline.sh
 " >> ~/.bashrc
+```
+
+## Configure sound
+This command will increase the maximum volume to 100%
+
+```
+amixer -D pulse sset Master 50%
+```
+
+It might also be worthwhile checking levels with
+
+```
+alsamixer
 ```
 
 ## Configure theme
