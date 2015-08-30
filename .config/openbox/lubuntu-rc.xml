@@ -854,7 +854,7 @@
     <!-- show icons on the menu -->
   </menu>
   <applications>
-    <application name="konsole">
+    <application name="konsole" type="normal">
       <size>
         <width>1002</width>
         <height>530</height>
