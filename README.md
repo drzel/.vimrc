@@ -40,10 +40,10 @@ sudo apt-get install build-essential curl git cmake xsel numix-gtk-theme numix-i
 
 ## Install VirtualBox Guest Additions
 From VirtualBox menu select Devices > Insert Guest Additions CD Images, or if you have downloaded a test build Guest Additions, select Devices > Optical Drives > Choose Disk Image... and select the Guest Additions .iso fie
-```
+
 
 ## Configure powerline
-```
+```bash
 echo -e "
 # For powerline
 powerline-daemon -q
@@ -55,13 +55,10 @@ POWERLINE_BASH_SELECT=1
 
 ## Configure sound
 This command will increase the maximum volume to 100%
-
 ```
 amixer -D pulse sset Master 50%
 ```
-
 It might also be worthwhile checking levels with
-
 ```
 alsamixer
 ```
@@ -71,7 +68,6 @@ Open Menu > Preferences > Customize Look and Feel
 * Widget: Numix
 * Icon Theme: Numix Circle
 * Window Border: Theme > Numix
-
 At this point I recommend closing LXTerminal
 
 ## Installing Ruby / Rails
@@ -97,7 +93,8 @@ For easiest setup use the same username and password as your Lubuntu user accoun
 sudo -u postgres createuser -s username
 sudo -u postgres psql
 ```
-```
+Enter and confirm password.
+```bash
 postgres=# \password username
 postgres=# \q
 ```
