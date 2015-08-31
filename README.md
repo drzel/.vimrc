@@ -22,9 +22,6 @@ Download and install latest files for your OS from https://www.virtualbox.org/wi
 * Go to System Tools > Software Updater
 * Install updates
 
-## Install VirtualBox Guest Additions
-From VirtualBox menu select Devices > Insert Guest Additions CD Images, or if you have downloaded a test build Guest Additions, select Devices > Optical Drives > Choose Disk Image... and select the Guest Additions .iso fie
-
 ## Install repositories
 ```bash
 sudo add-apt-repository ppa:neovim-ppa/unstable
@@ -38,7 +35,11 @@ sudo apt-get update
 
 ## Install programs
 ```bash
-sudo apt-get install build-essential curl git cmake xsel numix-gtk-theme numix-icon-theme numix-icon-theme-circle postgresql postgresql-contrib libpq-dev konsole neovim python-dev python-pip python3-dev python3-pip exuberant-ctags powerline pavucontrol
+sudo apt-get install build-essential curl git cmake xsel numix-gtk-theme numix-icon-theme numix-icon-theme-circle postgresql postgresql-contrib libpq-dev konsole neovim python-dev python-pip python3-dev python3-pip exuberant-ctags powerline pavucontrol xclip hexchat
+```
+
+## Install VirtualBox Guest Additions
+From VirtualBox menu select Devices > Insert Guest Additions CD Images, or if you have downloaded a test build Guest Additions, select Devices > Optical Drives > Choose Disk Image... and select the Guest Additions .iso fie
 ```
 
 ## Configure powerline
@@ -83,6 +84,7 @@ Note: For installation on other terminals check https://rvm.io/integration for c
 
 ### Install RVM
 ```
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 \curl -sSL https://get.rvm.io | bash -s stable --rails
 source /home/drzel/.rvm/scripts/rvm
 type rvm | head -1
@@ -127,7 +129,7 @@ sudo update-alternatives --config editor
 ### Install powerline-fonts
 ```bash
 git clone https://github.com/powerline/fonts.git ~/temp
-~/temp/powerline-fonts/./install.sh
+~/temp/./install.sh
 rm -rf ~/temp
 ```
 
@@ -135,6 +137,15 @@ rm -rf ~/temp
 ```bash
 curl -fLo ~/.nvim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+```
+
+## Install dotfiles
+```
+git clone https://github.com/svetlyak40wt/dotfiler.git ~/.dotfiles
+echo 'export PATH="$PATH:$HOME/.dotfiles/bin"' >> $HOME/.bashrc
+source .bashrc
+git clone https://github.com/drzel/dotfiles.git ~/.dotfiles/dotfiles
+dot update
 ```
 
 #### Configure FlooBits plugin
@@ -147,13 +158,6 @@ pip install neovim
 ~/.nvim/plugged/.install.sh
 ```
 
-## Install dotfiles
-```
-git clone https://github.com/svetlyak40wt/dotfiler.git ~/.dotfiles
-echo 'export PATH="$PATH:$HOME/.dotfiles/bin" >> $HOME/.bashrc
-git clone https://github.com/drzel/dotfiles.git ~/.dotfiles/dotfiles
-dot update
-```
 ## Confirm working
 ```
 rails new temp-rails-project
